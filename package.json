@@ -1,0 +1,30 @@
+{
+  "name": "karvi-page-test",
+  "version": "1.0.0",
+  "description": "Technical test for React frontend developer position at Karvi.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunod99/karvi-page-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brunod99/karvi-page-test/issues"
+  },
+  "homepage": "https://github.com/brunod99/karvi-page-test#readme"
+}
