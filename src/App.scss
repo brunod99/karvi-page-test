@@ -1,0 +1,12 @@
+#root {
+  letter-spacing: 1px;
+  padding-top: 40px;
+
+  & > div {
+    display: flex;
+    font-size: 25px;
+    font-weight: bold;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
