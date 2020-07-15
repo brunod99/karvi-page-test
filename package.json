@@ -4,13 +4,16 @@
   "description": "Technical test for React frontend developer position at Karvi.",
   "main": "index.js",
   "dependencies": {
+    "bootstrap": "^4.5.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
     "node-sass": "^4.14.1",
     "normalize.css": "^8.0.1",
     "prettier": "^2.0.5",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",
@@ -47,9 +50,9 @@
     "start": "webpack-dev-server --open --config webpack.development.js",
     "build": "webpack --config webpack.production.js",
     "format": "./node_modules/.bin/prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,scss,md}'",
-    "lint:css": "stylelint src/**/*.css --fix",
+    "lint:css": "stylelint src/**/*.scss --fix",
     "lint:js": "eslint --fix --ext .js,.jsx .",
-    "lint": "npm run lint:css && npm run lint:css",
+    "lint": "npm run lint:css && npm run lint:js",
     "test": "jest"
   },
   "husky": {

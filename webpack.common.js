@@ -17,6 +17,9 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
+        resolve: {
+          extensions: ['.js', '.jsx'],
+        },
         use: {
           loader: 'babel-loader',
         },
@@ -36,7 +39,7 @@ module.exports = {
           {
             loader: 'css-loader',
             options: {
-              modules: true,
+              modules: devMode ? false : true,
               sourceMap: devMode ? true : false,
               importLoaders: 1,
             },
@@ -49,7 +52,7 @@ module.exports = {
         use: {
           loader: 'file-loader',
           options: {
-            outputPath: '/images/',
+            outputPath: 'images/',
           },
         },
       },
@@ -65,7 +68,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['*', '.js'],
+    extensions: ['*', '.js', '.jsx'],
   },
   plugins: [
     new CleanWebpackPlugin(),
