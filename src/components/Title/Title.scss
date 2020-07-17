@@ -1,0 +1,26 @@
+.title {
+  padding-top: 13px;
+  padding-bottom: 34px;
+  box-shadow: 0 3px 6px rgba(#000, 0.16);
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  top: 100px;
+
+  .breadcrumbs {
+    padding-left: initial;
+    margin-bottom: 22px;
+
+    .breadcrumbs__item {
+      text-decoration: underline;
+
+      &.active {
+        text-decoration: initial;
+      }
+    }
+
+    .breadcrumbs__line {
+      margin: 0 2px;
+    }
+  }
+}

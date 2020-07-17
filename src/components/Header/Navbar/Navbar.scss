@@ -1,0 +1,37 @@
+@import '../../../styles/main.scss';
+
+.navbar {
+  padding: 30px 0 !important;
+
+  .navbar__left {
+    width: 50%;
+
+    .navbar__items-container {
+      margin-bottom: initial;
+
+      .navbar__items {
+        // font-weight: $bold;
+        padding-right: 42px;
+      }
+    }
+  }
+
+  .navbar__user-container {
+    .navbar__user-data {
+      padding-right: 38.6px;
+
+      &:last-child {
+        padding-right: initial;
+      }
+
+      a {
+        .navbar__user-data-img {
+          padding-right: 8px;
+        }
+
+        color: $dark-grey;
+        font-size: 16px;
+      }
+    }
+  }
+}
