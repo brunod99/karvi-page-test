@@ -1,7 +1,6 @@
 import React from 'react';
 import Title from '../components/Title/Title';
 import Filter from '../components/Filter/Filter';
-import '../styles/pages/UsedCars.scss';
 import Items from '../components/Items/Items';
 
 const UsedCars = () => {

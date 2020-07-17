@@ -1,0 +1,9 @@
+.link {
+  color: $primary-color;
+  transition: color 0.3s;
+
+  // Hover
+  &:hover {
+    color: $secondary-color;
+  }
+}

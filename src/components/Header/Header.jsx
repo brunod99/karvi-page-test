@@ -2,7 +2,6 @@ import React from 'react';
 import Navbar from './Navbar/Navbar';
 import carIcon from '../../../public/images/car.svg';
 import user from '../../../public/images/user.svg';
-import './Header.scss';
 
 const Header = () => {
   return (
