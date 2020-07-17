@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Title.scss';
 
-const Title = ({ brand, city }) => {
+const Title = ({brand, city}) => {
   return (
     <section className="title w-100">
       <div className="container">
