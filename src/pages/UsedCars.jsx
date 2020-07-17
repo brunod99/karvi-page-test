@@ -1,7 +1,8 @@
 import React from 'react';
 import Title from '../components/Title/Title';
 import Filter from '../components/Filter/Filter';
-import '../styles/UsedCars.scss';
+import '../styles/pages/UsedCars.scss';
+import Items from '../components/Items/Items';
 
 const UsedCars = () => {
   return (
@@ -10,8 +11,9 @@ const UsedCars = () => {
         city="Sao Paulo"
       />
 
-      <div className="used-cars__content container">
+      <div className="used-cars__content container d-flex">
         <Filter />
+        <Items />
       </div>
     </main>
   );
