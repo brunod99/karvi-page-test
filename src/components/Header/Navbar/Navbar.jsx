@@ -36,7 +36,7 @@ const Navbar = ({items, userSpecs}) => {
 
               <ul className="navbar__items-container d-flex align-items-end">
                 {items.map((item) => (
-                  <li className="navbar__items" key={item}>{item}</li>
+                  <li className="navbar__items" key={item}><Link to="/">{item}</Link></li>
                 ))}
               </ul>
             </div>
