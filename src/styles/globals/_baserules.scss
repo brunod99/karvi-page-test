@@ -178,7 +178,7 @@ h2,
 h3,
 .h3 {
   font-size: 18px;
-  line-height: 24px;
+  line-height: 1;
 }
 
 h4,
@@ -266,13 +266,14 @@ hr {
 
 .container {
   max-width: initial;
+  padding-left: $padding-container;
+  padding-right: $padding-container;
 
-  padding-left: 43px;
-  padding-right: 43px;
+  $padding-container: 43px;
 
   // Desktop
-  @include respond-above(xl) {
-    max-width: 1279px;
+  @include respond-above(lg) {
+    max-width: calc(1279px + #{$padding-container * 2});
   }
 }
 /* --------- CUSTOM MODIFICATIONS ---------- */
