@@ -5,6 +5,15 @@ const Items = () => {
   return (
     <section className="items d-flex flex-wrap">
       <ItemSingle />
+      <ItemSingle />
+      <ItemSingle />
+      <ItemSingle />
+      <ItemSingle />
+      <ItemSingle />
+      <ItemSingle />
+      <ItemSingle />
+      <ItemSingle />
+      <ItemSingle />
     </section>
   );
 };
