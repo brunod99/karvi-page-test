@@ -7,9 +7,9 @@ const Title = ({brand, city}) => {
       <div className="container">
 
         <ul className="breadcrumbs d-flex align-items-end">
-          <li className="breadcrumbs__item">Home</li>
+          <li className="breadcrumbs__item"><button>Home</button></li>
           <span className="breadcrumbs__line">/</span>
-          <li className="breadcrumbs__item active">Catalogos usados</li>
+          <li className="breadcrumbs__item breadcrumbs__item--state-active">Catalogos usados</li>
         </ul>
 
         <h1>

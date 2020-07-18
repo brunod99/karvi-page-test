@@ -149,6 +149,7 @@ p,
 input,
 textarea,
 select {
+  color: $black;
   font-family: $primary-font;
 }
 
@@ -259,17 +260,10 @@ hr {
   margin-right: 0;
 }
 
-.container-fluid {
-  padding-left: 43px;
-  padding-right: 43px;
-}
-
 .container {
   max-width: initial;
   padding-left: $padding-container;
   padding-right: $padding-container;
-
-  $padding-container: 43px;
 
   // Desktop
   @include respond-above(lg) {

@@ -1,23 +1,23 @@
-$separation: 12px;
-
 .items__item {
   background-color: $white;
   border: 1px $secondary-grey;
   border-radius: 3px;
   box-shadow: 0 3px 6px rgba($black, 0.04);
   margin-bottom: 13px;
-  margin-right: $separation;
+  margin-right: $item-separation;
   position: relative;
 
+  // Third childs
   &:nth-child(3n) {
     margin-right: initial;
 
     // Ipad pro
     @include respond-below(md) {
-     margin-right: $separation;
+     margin-right: $item-separation;
     }
   }
 
+  // Second childs
   &:nth-child(2n) {
     // Ipad pro
     @include respond-below(md) {

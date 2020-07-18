@@ -1,8 +1,8 @@
 .title {
   background-color: $white;
   box-shadow: 0 3px 6px rgba(#000, 0.16);
-  padding-bottom: 34px;
-  padding-top: 13px;
+  padding-bottom: 24px;
+  padding-top: 11px;
   position: fixed;
   top: 83.75px;
   width: 100%;
@@ -13,10 +13,19 @@
     padding-left: initial;
 
     .breadcrumbs__item {
+      font-size: 14px;
+      font-weight: $light;
+      line-height: 19px;
       text-decoration: underline;
 
-      &.active {
+      &--state-active {
+        font-weight: $regular;
         text-decoration: initial;
+      }
+
+      & > button {
+        font-weight: inherit;
+        text-decoration: inherit;
       }
     }
 

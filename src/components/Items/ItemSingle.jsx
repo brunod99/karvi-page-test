@@ -1,15 +1,16 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import Chevrolet from '../../../public/images/chevrolet.jpg';
 import Status from '../../../public/images/status-down.svg';
 import Heart from '../../../public/images/heart.svg';
 
 const ItemSingle = () => {
   return (
-    <div className="items__item">
+    <Link to="/" className="items__item">
 
-      <div className="items__item-heart-container d-flex justify-content-center align-items-center">
+      <button className="items__item-heart-container d-flex justify-content-center align-items-center">
         <img src={Heart} alt="Heart" className="items__item-heart" />
-      </div>
+      </button>
 
       <img src={Chevrolet} alt="Chevrolet" className="items__item-img img-fluid" />
 
@@ -31,7 +32,7 @@ const ItemSingle = () => {
 
       </div>
 
-    </div>
+    </Link>
   );
 };
 
