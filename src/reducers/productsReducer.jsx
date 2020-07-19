@@ -9,6 +9,7 @@ const initialState = {
   filters: [],
   loading: false,
   error: null,
+  total: 0,
 };
 
 export default function( state = initialState, action) {
@@ -24,6 +25,7 @@ export default function( state = initialState, action) {
       products: action.payload.items,
       filters: action.payload.availableFilters,
       loading: initialState.loading,
+      total: action.payload.totalCount,
     };
   case GET_PRODUCTS_ERROR:
     return {

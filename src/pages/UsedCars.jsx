@@ -1,11 +1,12 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import Title from '../components/Title/Title';
-import Filter from '../components/Filter/Filter';
 import Items from '../components/Items/Items';
 import {getProductsActions} from '../actions/products/getProductsActions';
 import Error from '../components/Error/Error';
 import Loader from '../components/Loader/Loader';
+import FilterContainer from '../components/Filter/FilterContainer';
+import CONSTANTS from '../constants';
 
 const UsedCars = () => {
   const dispatch = useDispatch();
@@ -18,6 +19,8 @@ const UsedCars = () => {
 
   // Selectors
   const {loading, error} = useSelector((state) => state.products);
+
+  const city = CONSTANTS.city;
 
   return (
     <main className="used-cars">
@@ -37,11 +40,13 @@ const UsedCars = () => {
             ) : (
               <>
                 <Title
-                  city="Sao Paulo"
+                  city={city}
                 />
 
                 <div className="used-cars__content container">
-                  <Filter />
+                  <FilterContainer
+                    city={city}
+                  />
                   <Items />
                 </div>
               </>

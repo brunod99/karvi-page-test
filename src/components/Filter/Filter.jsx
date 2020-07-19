@@ -1,12 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import LocationIcon from '../../../public/images/icon-location.svg';
 import Settings from '../../../public/images/icons-dark-setting.svg';
 
-const Filter = () => {
+const Filter = ({city}) => {
   return (
     <section className="filter">
 
-      {/* Ipad - General */}
+      {/* General - Ipad */}
       <div className="filter__results-ipad-general justify-content-between align-items-center">
 
         <h6 className="filter__results-ipad-general-results">4.324 resultados</h6>
@@ -31,6 +32,7 @@ const Filter = () => {
 
         </div>
 
+        {/* Content */}
         <div className="filter__content">
 
           <div className="filter__results-total-container">
@@ -46,7 +48,7 @@ const Filter = () => {
 
                 <button className="link filter__results-geo d-flex align-items-end">
 
-                  <h6 className="filter__results-geo-text">São Paulo</h6>
+                  <h6 className="filter__results-geo-text">{city}</h6>
                   <img src={LocationIcon} alt="Location"/>
 
                 </button>
@@ -64,6 +66,10 @@ const Filter = () => {
 
     </section>
   );
+};
+
+Filter.propTypes = {
+  city: PropTypes.string.isRequired,
 };
 
 export default Filter;
