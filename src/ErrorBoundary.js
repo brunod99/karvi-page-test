@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Error from './components/Error/Error';
 
 export default class ErrorBoundary extends Component {
   state = {
@@ -24,7 +25,9 @@ export default class ErrorBoundary extends Component {
     // Display custom UI if there are errors
     // in our application
     return (
-      <div>Something went wrong</div>
+      <Error>
+        <h1>Something went wrong. Please look up in your console for more information.</h1>
+      </Error>
     );
   }
 }
