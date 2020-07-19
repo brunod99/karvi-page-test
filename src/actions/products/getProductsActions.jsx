@@ -13,7 +13,6 @@ export function getProductsActions() {
       const response = await axiosClient.get('/products');
       dispatch( getProductsSuccess( response.data ) );
     } catch (error) {
-      console.log(error);
       dispatch( getProductsError(true) );
     }
   };
