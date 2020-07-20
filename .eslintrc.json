@@ -6,6 +6,7 @@
     "jest": true
   },
   "extends": ["plugin:react/recommended", "google"],
+  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true

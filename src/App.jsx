@@ -3,15 +3,22 @@ import Header from './components/Header/Header';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import UsedCars from './pages/UsedCars';
 
+// Redux
+import {Provider} from 'react-redux';
+import store from './store';
+
 const App = () => {
   return (
     <Router>
-      <Header city="Sao Paulo" />
+      <Provider store={store}>
 
-      <Switch>
-        <Route exact path="/" component={UsedCars} />
-      </Switch>
+        <Header city="Sao Paulo" />
 
+        <Switch>
+          <Route exact path="/" component={UsedCars} />
+        </Switch>
+
+      </Provider>
     </Router>
   );
 };

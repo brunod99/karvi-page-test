@@ -1,0 +1,36 @@
+.loader {
+  align-items: center;
+  display: flex;
+  height: calc(100vh - 442px);
+  justify-content: center;
+
+  // Ipad
+  @include respond-below(sm) {
+    height: calc(100vh - 336px);
+  }
+}
+
+.car {
+  &__body {
+    animation: shake 0.2s ease-in-out infinite alternate;
+  }
+
+  &__line {
+    animation: line 0.8s ease-in-out infinite;
+    animation-fill-mode: both;
+    stroke-dasharray: 22;
+    transform-origin: center right;
+
+    &--top {
+      animation-delay: 0s;
+    }
+
+    &--middle {
+      animation-delay: 0.2s;
+    }
+
+    &--bottom {
+      animation-delay: 0.4s;
+    }
+  }
+}

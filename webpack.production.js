@@ -1,6 +1,8 @@
 const {merge} = require('webpack-merge');
 const common = require('./webpack.common');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = merge(common, {
   mode: 'production',
@@ -13,7 +15,7 @@ module.exports = merge(common, {
           {
             loader: 'css-loader',
             options: {
-              modules: true,
+              modules: false,
               sourceMap: false,
               importLoaders: 1,
             },
@@ -36,6 +38,10 @@ module.exports = merge(common, {
     new MiniCssExtractPlugin({
       filename: '[name].[hash].css',
       chunkFilename: '[id].[hash].css',
+    }),
+    new Dotenv({
+      path: './.env.production',
+      safe: true,
     }),
   ],
 });

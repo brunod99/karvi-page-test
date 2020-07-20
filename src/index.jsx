@@ -5,4 +5,11 @@ import 'normalize.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import './styles/app.scss';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import ErrorBoundary from './ErrorBoundary';
+
+ReactDOM.render(
+  <ErrorBoundary>
+    <App />
+  </ErrorBoundary>,
+  document.getElementById('root'),
+);

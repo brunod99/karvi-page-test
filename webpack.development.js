@@ -1,8 +1,9 @@
 const {merge} = require('webpack-merge');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const common = require('./webpack.common');
+const Dotenv = require('dotenv-webpack');
 
-module.exports = merge(common, {
+module.exports = merge({
   mode: 'development',
   devtool: 'inline-source-map',
   stats: 'minimal',
@@ -37,5 +38,6 @@ module.exports = merge(common, {
       filename: '[name].css',
       chunkFilename: '[id].css',
     }),
+    new Dotenv(),
   ],
-});
+}, common);
