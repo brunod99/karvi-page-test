@@ -1,14 +1,22 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import Chevrolet from '../../../public/images/chevrolet.jpg';
 import Heart from '../../../public/images/heart.svg';
+import HeartRed from '../../../public/images/heart-1.svg';
 
 import Award from '../../../public/images/award.svg';
 
 const ItemSingle = ({title, copy, specs, status, price, location, characteristics}) => {
+  // Hooks
+  const [heart, setHeart] = useState(false);
+
+  // Handlers
+  const handleClick = () => {
+    setHeart(!heart);
+  };
+
   return (
-    <Link to="/" className="items__item">
+    <button className="items__item text-left" onClick={handleClick}>
 
       <div className="items__item-inner">
 
@@ -16,9 +24,15 @@ const ItemSingle = ({title, copy, specs, status, price, location, characteristic
         <div className="items__item-front">
 
           {/* Heart */}
-          <button className="items__item-heart-container d-flex justify-content-center align-items-center">
-            <img src={Heart} alt="Heart" className="items__item-heart" />
-          </button>
+          <div className="items__item-heart-container d-flex justify-content-center align-items-center">
+            {
+              heart ? (
+                <img src={HeartRed} alt="Heart" className="items__item-heart" />
+              ) : (
+                <img src={Heart} alt="Heart" className="items__item-heart" />
+              )
+            }
+          </div>
 
           {/* Image */}
           <div style={{
@@ -83,7 +97,7 @@ const ItemSingle = ({title, copy, specs, status, price, location, characteristic
 
       </div>
 
-    </Link>
+    </button>
   );
 };
 
