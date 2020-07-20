@@ -3,14 +3,14 @@ import PropTypes from 'prop-types';
 import LocationIcon from '../../../public/images/icon-location.svg';
 import Settings from '../../../public/images/icons-dark-setting.svg';
 
-const Filter = ({city}) => {
+const Filter = ({city, total}) => {
   return (
     <section className="filter">
 
       {/* General - Ipad */}
       <div className="filter__results-ipad-general justify-content-between align-items-center">
 
-        <h6 className="filter__results-ipad-general-results">4.324 resultados</h6>
+        <h6 className="filter__results-ipad-general-results">{total} resultados</h6>
 
         <div className="filter__results-ipad-general-filters d-flex align-items-center">
           <h6 className="filter__results-ipad-general-filters-name">Filtro (4)</h6>
@@ -36,7 +36,7 @@ const Filter = ({city}) => {
         <div className="filter__content">
 
           <div className="filter__results-total-container">
-            <h6 className="filter__results-total">4.324 resultados</h6>
+            <h6 className="filter__results-total">{total} resultados</h6>
           </div>
 
           <ul className="filter__results-container">
@@ -70,6 +70,7 @@ const Filter = ({city}) => {
 
 Filter.propTypes = {
   city: PropTypes.string.isRequired,
+  total: PropTypes.number.isRequired,
 };
 
 export default Filter;
